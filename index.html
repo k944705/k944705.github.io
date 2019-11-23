@@ -5,48 +5,48 @@
 </head>
 
 <body>
-    /*Arduino Leonardo でのみ動きます*/
-/*ツール → ボード → Arduino Leonardo*/
-
-/*キーボードのライブラリ*/
-#include <Keyboard.h>
-
-int a = 0;
-
-void setup()
-{
-  /*D2ピン使用（D2~D13の中から1つ選ぶ）*/
-  pinMode(2, INPUT);
-
-  Keyboard.begin();
-}
-
-void loop()
-{
-  /*  ↑ キー押したとき*/
-  if ( (a == 0) && (digitalRead(2) == 0) ) {
-    Keyboard.write(0xDA);
-    Keyboard.releaseAll();
-    a = 1;
-    delay(5);
-  }
-  /*  ↑ キー離したとき*/
-  if ((a == 1) && (digitalRead(2) == 1)) {
-    Keyboard.releaseAll();
-    a = 0;
-    delay(5);
-  }
-}
-
-/*ハード側の配線*/
-//Aruduino側→5V,GND,D2ピン使用
-//
-//スイッチ→5V
-//  ↓
-//  ↓→D2ピン
-//  ↓
-//　抵抗
-//  ↓
-//  GND
+/*Arduino Leonardo でのみ動きます*/<br>
+/*ツール → ボード → Arduino Leonardo*/<br>
+<br>
+/*キーボードのライブラリ*/<br>
+#include <Keyboard.h><br>
+<br>
+int a = 0;<br>
+<br>
+void setup()<br>
+{<br>
+  /*D2ピン使用（D2~D13の中から1つ選ぶ）*/<br>
+  pinMode(2, INPUT);<br>
+<br>
+  Keyboard.begin();<br>
+}<br>
+<br>
+void loop()<br>
+{<br>
+  /*  ↑ キー押したとき*/<br>
+  if ( (a == 0) && (digitalRead(2) == 0) ) {<br>
+    Keyboard.write(0xDA);<br>
+    Keyboard.releaseAll();<br>
+    a = 1;<br>
+    delay(5);<br>
+  }<br>
+  /*  ↑ キー離したとき*/<br>
+  if ((a == 1) && (digitalRead(2) == 1)) {<br>
+    Keyboard.releaseAll();<br>
+    a = 0;<br>
+    delay(5);<br>
+  }<br>
+}<br>
+<br>
+/*ハード側の配線*/<br>
+//Aruduino側→5V,GND,D2ピン使用<br>
+//<br>
+//スイッチ→5V<br>
+//  ↓<br>
+//  ↓→D2ピン<br>
+//  ↓<br>
+//　抵抗<br>
+//  ↓<br>
+//  GND<br>
 </body>
 </html>
