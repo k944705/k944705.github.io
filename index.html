@@ -15,27 +15,27 @@ int a = 0;<br>
 <br>
 void setup()<br>
 {<br>
-  /*D2ピン使用（D2~D13の中から1つ選ぶ）*/<br>
-  pinMode(2, INPUT);<br>
+&nbsp;/*D2ピン使用（D2~D13の中から1つ選ぶ）*/<br>
+&nbsp;pinMode(2, INPUT);<br>
 <br>
-  Keyboard.begin();<br>
+&nbsp;Keyboard.begin();<br>
 }<br>
 <br>
 void loop()<br>
 {<br>
-  /*  ↑ キー押したとき*/<br>
-  <span class="mrg-10">if ( (a == 0) && (digitalRead(2) == 0) ) {</span>><br>
-    Keyboard.write(0xDA);<br>
-    Keyboard.releaseAll();<br>
-    a = 1;<br>
-    delay(5);<br>
-  }<br>
-  /*  ↑ キー離したとき*/<br>
-  if ((a == 1) && (digitalRead(2) == 1)) {<br>
-    Keyboard.releaseAll();<br>
-    a = 0;<br>
-    delay(5);<br>
-  }<br>
+&nbsp;/*  ↑ キー押したとき*/<br>
+&nbsp;if ( (a == 0) && (digitalRead(2) == 0) ) {<br>
+&nbsp;&nbsp;Keyboard.write(0xDA);<br>
+&nbsp;&nbsp;Keyboard.releaseAll();<br>
+&nbsp;&nbsp;a = 1;<br>
+&nbsp;&nbsp;delay(5);<br>
+&nbsp;}<br>
+&nbsp;/*  ↑ キー離したとき*/<br>
+&nbsp;if ((a == 1) && (digitalRead(2) == 1)) {<br>
+&nbsp;&nbsp;Keyboard.releaseAll();<br>
+&nbsp;&nbsp;a = 0;<br>
+&nbsp;&nbsp;delay(5);<br>
+&nbsp;}<br>
 }<br>
 <br>
 /*ハード側の配線*/<br>
@@ -49,12 +49,4 @@ void loop()<br>
 //  ↓<br>
 //  GND<br>
 </body>
-
-<css>
-    mgr-10
-    {
-        margin right : 10px;
-    }
-</css>
-
 </html>
