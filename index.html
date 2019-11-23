@@ -24,7 +24,7 @@ void setup()<br>
 void loop()<br>
 {<br>
   /*  ↑ キー押したとき*/<br>
-  if ( (a == 0) && (digitalRead(2) == 0) ) {<br>
+  <span class="mgr-10">if ( (a == 0) && (digitalRead(2) == 0) ) {</span><br>
     Keyboard.write(0xDA);<br>
     Keyboard.releaseAll();<br>
     a = 1;<br>
@@ -50,3 +50,6 @@ void loop()<br>
 //  GND<br>
 </body>
 </html>
+<css>mgr-10{
+    margin-right : 10px
+</css>
