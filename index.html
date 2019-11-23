@@ -15,7 +15,7 @@ int a = 0;<br>
 <br>
 void setup()<br>
 {<br>
-  /*D2ピン使用（D2~D13の中から1つ選ぶ）*/<br>
+  &nbsp;/*D2ピン使用（D2~D13の中から1つ選ぶ）*/<br>
   pinMode(2, INPUT);<br>
 <br>
   Keyboard.begin();<br>
@@ -24,7 +24,8 @@ void setup()<br>
 void loop()<br>
 {<br>
   /*  ↑ キー押したとき*/<br>
-  <span class="mgr-10">if ( (a == 0) && (digitalRead(2) == 0) ) {</span><br>
+  <span
+  >if ( (a == 0) && (digitalRead(2) == 0) ) {<br>
     Keyboard.write(0xDA);<br>
     Keyboard.releaseAll();<br>
     a = 1;<br>
@@ -50,6 +51,3 @@ void loop()<br>
 //  GND<br>
 </body>
 </html>
-<css>mgr-10{
-    margin-right : 10px
-</css>
