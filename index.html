@@ -15,38 +15,38 @@ int a = 0;<br>
 <br>
 void setup()<br>
 {<br>
-&nbsp;/*D2ピン使用（D2~D13の中から1つ選ぶ）*/<br>
-&nbsp;pinMode(2, INPUT);<br>
+&emsp;/*D2ピン使用（D2~D13の中から1つ選ぶ）*/<br>
+&emsp;pinMode(2, INPUT);<br>
 <br>
-&nbsp;Keyboard.begin();<br>
+&emsp;Keyboard.begin();<br>
 }<br>
 <br>
 void loop()<br>
 {<br>
-&nbsp;/*  ↑ キー押したとき*/<br>
-&nbsp;if ( (a == 0) && (digitalRead(2) == 0) ) {<br>
-&emsp;Keyboard.write(0xDA);<br>
-&emsp;Keyboard.releaseAll();<br>
-&emsp;a = 1;<br>
-&emsp;delay(5);<br>
-&nbsp;}<br>
-&nbsp;/*  ↑ キー離したとき*/<br>
-&nbsp;if ((a == 1) && (digitalRead(2) == 1)) {<br>
-&emsp;Keyboard.releaseAll();<br>
-&emsp;a = 0;<br>
-&emsp;delay(5);<br>
-&nbsp;}<br>
+&emsp;/*  ↑ キー押したとき*/<br>
+&emsp;if ( (a == 0) && (digitalRead(2) == 0) ) {<br>
+&emsp;&emsp;Keyboard.write(0xDA);<br>
+&emsp;&emsp;Keyboard.releaseAll();<br>
+&emsp;&emsp;a = 1;<br>
+&emsp;&emsp;delay(5);<br>
+&emsp;}<br>
+&emsp;/*  ↑ キー離したとき*/<br>
+&emsp;if ((a == 1) && (digitalRead(2) == 1)) {<br>
+&emsp;&emsp;Keyboard.releaseAll();<br>
+&emsp;&emsp;a = 0;<br>
+&emsp;&emsp;delay(5);<br>
+&emsp;}<br>
 }<br>
 <br>
 /*ハード側の配線*/<br>
 //Aruduino側→5V,GND,D2ピン使用<br>
 //<br>
 //スイッチ→5V<br>
-//  ↓<br>
-//  ↓→D2ピン<br>
-//  ↓<br>
-//　抵抗<br>
-//  ↓<br>
-//  GND<br>
+//&emsp;↓<br>
+//&emsp;↓→D2ピン<br>
+//&emsp;↓<br>
+//&emsp;抵抗<br>
+//&emsp;↓<br>
+//&emsp;GND<br>
 </body>
 </html>
