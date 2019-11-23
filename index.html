@@ -25,16 +25,16 @@ void loop()<br>
 {<br>
 &nbsp;/*  ↑ キー押したとき*/<br>
 &nbsp;if ( (a == 0) && (digitalRead(2) == 0) ) {<br>
-&nbsp;&nbsp;Keyboard.write(0xDA);<br>
-&nbsp;&nbsp;Keyboard.releaseAll();<br>
-&nbsp;&nbsp;a = 1;<br>
-&nbsp;&nbsp;delay(5);<br>
+&emsp;Keyboard.write(0xDA);<br>
+&emsp;Keyboard.releaseAll();<br>
+&emsp;a = 1;<br>
+&emsp;delay(5);<br>
 &nbsp;}<br>
 &nbsp;/*  ↑ キー離したとき*/<br>
 &nbsp;if ((a == 1) && (digitalRead(2) == 1)) {<br>
-&nbsp;&nbsp;Keyboard.releaseAll();<br>
-&nbsp;&nbsp;a = 0;<br>
-&nbsp;&nbsp;delay(5);<br>
+&emsp;Keyboard.releaseAll();<br>
+&emsp;a = 0;<br>
+&emsp;delay(5);<br>
 &nbsp;}<br>
 }<br>
 <br>
